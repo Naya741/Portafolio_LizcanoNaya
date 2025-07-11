@@ -80,6 +80,27 @@ body {
   font-size: 0.9rem;
   font-weight: 500;
 }
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 3px;
+  background: #f5eff1;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform: translateX(-50%);
+  border-radius: 2px;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
+
+.nav-link.active::after {
+  width: 100%;
+  background: linear-gradient(90deg, #ff6b9d, #ff5a8a);
+}
 
 .nav-link:hover {
   background: rgba(255, 107, 157, 0.1);
@@ -118,7 +139,8 @@ body {
 /* Hero Section Enhanced */
 .hero {
   height: 100vh;
-  background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
+  background: linear-gradient(135deg, rgba(10, 10, 10, 0.7) 0%, rgba(26, 26, 46, 0.8) 50%, rgba(22, 33, 62, 0.9) 100%),
+    url("./imgs/imagen\ portafolio.webp") center / cover;
   position: relative;
   display: flex;
   align-items: center;
@@ -531,11 +553,13 @@ section {
 }
 
 .values-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 1.5rem;
-  margin-top: 1.5rem;
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: center; 
+    gap: 1.5rem; 
+    margin-top: 1.5rem;
 }
+
 
 .value-item {
   display: flex;
@@ -1187,3 +1211,6 @@ section {
     display: none;
   }
 }
+
+
+
