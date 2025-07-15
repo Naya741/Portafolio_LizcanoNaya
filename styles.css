@@ -1229,18 +1229,21 @@ section {
     display: none;
   }
 }
-
-.about-profile-image-container{
-
-  height: 20vh;
-  width: 11vw;
-  border: 1px solid rgb(184, 103, 184);
-  border-radius: 10vw;
-  margin-bottom: 100px;
-  object-fit: cover;
+.about-profile-image-container {
+  width: 100%;                /* Tamaño flexible según el ancho del contenedor padre */
+  max-width: 400px;          /* Límite superior para evitar que se agrande demasiado */
+  left: 200px;
+  aspect-ratio: 1 / 1;       /* Mantiene proporción cuadrada */
+  border: 2px solid rgb(184, 103, 184);
+  border-radius: 50%;        /* Hace que el div sea redondo */
+  overflow: hidden;          /* Oculta bordes sobrantes de la imagen */
+  margin: 0 auto 2rem;       /* Centrado y margen inferior */
 }
 
-.about-profile-image-container img{
-
-
+.about-profile-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         /* Rellena sin deformar */
+  display: flex;
+  left: 100px;
 }
