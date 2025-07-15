@@ -1231,7 +1231,7 @@ section {
 }
 .about-profile-image-container {
   width: 100%;                /* Tamaño flexible según el ancho del contenedor padre */
-  max-width: 400px;          /* Límite superior para evitar que se agrande demasiado */
+  max-width: 350px;          /* Límite superior para evitar que se agrande demasiado */
   left: 200px;
   aspect-ratio: 1 / 1;       /* Mantiene proporción cuadrada */
   border: 2px solid rgb(184, 103, 184);
@@ -1246,4 +1246,42 @@ section {
   object-fit: cover;         /* Rellena sin deformar */
   display: flex;
   left: 100px;
+}
+
+Video Skills Section */
+.video-skills-section {
+  background: #0a0a0a; /* Fondo consistente con otras secciones */
+  padding-bottom: 100px; /* Espaciado inferior consistente */
+}
+
+.video-skills-banner {
+  background-image: url("assets/banners/video-skills-banner.jpg"); /* Imagen de banner para esta sección */
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Proporción 16:9 (altura / anchura) para videos responsivos */
+  height: 0;
+  overflow: hidden;
+  background-color: #000; /* Fondo negro mientras carga o si no hay video */
+  border-radius: 20px; /* Bordes redondeados */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para destacar el video */
+  margin-top: 4rem; /* Espacio entre el banner y el video */
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que el video cubra el contenedor sin distorsión */
+}
+
+/* Ajustes responsivos para el video */
+@media (max-width: 768px) {
+  .video-container {
+    padding-bottom: 75%; /* Ajusta la proporción para pantallas más pequeñas, por ejemplo, 4:3 */
+  }
 }
