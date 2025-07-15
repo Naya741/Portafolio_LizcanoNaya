@@ -1235,3 +1235,17 @@ section {
 
 
 
+.about-profile-image-container{
+
+  height: 20vh;
+  width: 11vw;
+  border: 1px solid rgb(184, 103, 184);
+  border-radius: 10vw;
+  margin-bottom: 100px;
+  object-fit: cover;
+}
+
+.about-profile-image-container img{
+
+
+}
