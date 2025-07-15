@@ -789,16 +789,34 @@ section {
   transform: scale(1.05);
 }
 
+
 .health-system {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background-image: url("./imgs/SimulacionF1.png");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7); 
 }
 
 .ecommerce-system {
   background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
 }
+.ecommerce-system {
+  background-image: url("./imgs/POKEAPI.png");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7); 
+}
+
 
 .security-app {
   background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.security-app {
+  background-image: url("./imgs/PYTHON.png");
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.7); 
 }
 
 .portfolio-overlay {
@@ -1211,6 +1229,9 @@ section {
     display: none;
   }
 }
+/* Estilos para el Avatar en la Sección "Sobre Mí" de index.html */
+
+
 
 
 
