@@ -1248,40 +1248,96 @@ section {
   left: 100px;
 }
 
-Video Skills Section */
-.video-skills-section {
-  background: #0a0a0a; /* Fondo consistente con otras secciones */
-  padding-bottom: 100px; /* Espaciado inferior consistente */
-}
-
-.video-skills-banner {
-  background-image: url("assets/banners/video-skills-banner.jpg"); /* Imagen de banner para esta sección */
-}
-
-.video-container {
+.video-section {
+  padding: 80px 0;
   position: relative;
-  width: 100%;
-  padding-bottom: 56.25%; /* Proporción 16:9 (altura / anchura) para videos responsivos */
-  height: 0;
-  overflow: hidden;
-  background-color: #000; /* Fondo negro mientras carga o si no hay video */
-  border-radius: 20px; /* Bordes redondeados */
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5); /* Sombra para destacar el video */
-  margin-top: 4rem; /* Espacio entre el banner y el video */
 }
 
-.video-container video {
+.video-section::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Asegura que el video cubra el contenedor sin distorsión */
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
-/* Ajustes responsivos para el video */
+.video-section .container {
+  position: relative;
+  z-index: 2;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.video-section .section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  color: white;
+  margin-bottom: 50px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.video-container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+.presentation-video {
+  width: 100%;
+  height: 450px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.video-placeholder {
+  width: 100%;
+  height: 450px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(255, 255, 255, 0.3);
+}
+
+.video-placeholder p {
+  color: white;
+  font-size: 1.2rem;
+  text-align: center;
+}
+
 @media (max-width: 768px) {
   .video-container {
-    padding-bottom: 75%; /* Ajusta la proporción para pantallas más pequeñas, por ejemplo, 4:3 */
+    padding-bottom: 75%;
+  }
+
+  /* Agregando media queries para la sección del video */
+  .video-section {
+    padding: 60px 0;
+  }
+
+  .video-section .section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+
+  .video-container {
+    padding: 20px;
+    margin: 0 10px;
+  }
+
+  .presentation-video,
+  .video-placeholder {
+    height: 250px;
   }
 }
